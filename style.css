@@ -1,0 +1,96 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #263038;
+    height: 100vh;
+}
+ 
+.loder{
+width: 32px;
+height: 90px;
+background-color: #fff;
+display: block;
+position: relative;
+border-bottom: 10px solid red;
+border-radius: 50% 50% 0 0;
+/* background-image: radial-gradient(ellipse at center,
+#fff 34%,
+#ff3d00 35%, #ff3d00 54%, #fff 55%),
+linear-gradient (#ff300 10px, trasparent 0);
+background-position: center 20px, center 2px;
+background-size: 28% 28%;
+border-radius: no-repeat;
+box-sizing: border-box;
+margin: auto;
+animation: animloaderbacka 1s linear infinite alternate; */
+background-image: radial-gradient(ellipse at center,
+#fff 34%,
+#ff3d00 35%, #ff3d00 54%, #fff 55%),
+linear-gradient(#ff3d00 10px, transparent 0);
+background-size: 28px 28px;
+background-position: center 20px, center 2px;
+background-repeat: no-repeat;
+box-sizing: border-box;
+margin: auto;
+animation: animloaderBacka 1s linear infinite alternate;
+}
+
+.loder::before {
+    content: '';
+    width: 64px;
+    height: 44px;
+    box-shadow: 0px 15px #ff3d00 inset;
+    box-sizing: border-box;
+    position: absolute;
+    top: 67px;
+    left: 50%;
+    transform: translateX(-50%);
+border-radius: 50%;
+}
+
+.loder:after{
+content: '';
+width: 34px;
+height: 34px;
+background:radial-gradient(ellipse at center,
+#ffdf00 8%,
+#ff3d00 24%,
+#000 100%);
+position: absolute;
+top: 112%;
+left: 50%;
+border-radius: 50% 50% 0;
+transform: translateX(-50%) rotate(45deg);
+background-repeat: no-repeat;
+background-size: 100px 100px;
+background-position: -44px -44px;
+box-shadow: 4px 4px 12px 0px #ff3d0080;
+box-sizing: border-box;
+animation: animloder 1s linear infinite alternate;
+}
+@keyframes animloderbasck{
+    0%, 30%, 70%{
+        transform: translateY(0px);
+    }
+    20%, 40%, 100%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes animloder{
+    0%{
+        width: 34px ;
+        height: 34px;
+        box-shadow: 4px 4px 12px 2px #ff3d0080;
+        background-position: -44px -44px;
+      background-size: 100px 100px;        
+    }
+    100%{
+        width: 30px;
+        height: 28px;
+        box-shadow: 2px 2px 8px 0px #ff3d0080;
+        background-position: -36px -36px;
+background-size: 80px 80px;
+    
+}
+}
